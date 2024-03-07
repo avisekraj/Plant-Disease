@@ -1,0 +1,75 @@
+<!-- predict.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prediction Result</title>
+    <style>
+        /* styles.css */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #555;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #predictionText {
+            font-weight: bold;
+        }
+        .back-button{
+            height: auto;
+            width: auto;
+        }
+        .button{
+            border: 2px solid goldenrod;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Leaf Disease Detection</h1>
+        <h2>Prediction Result</h2>
+        <div class="result">
+            <img src="data:image/png;base64,{{ image }}" alt="Uploaded Image">
+            <p id="predictionText">Predicted Disease: {{ prediction }}</p>
+        </div>
+        <div class="back-button">
+            <a class="button" href="/">Back</a>
+        </div>
+    </div>
+</body>
+
+</html>
